@@ -1,4 +1,3 @@
-import { check } from "diskusage";
 import fs from "fs";
 import { MessageMedia } from "whatsapp-web.js";
 class FileManager {
@@ -32,10 +31,7 @@ class FileManager {
   }
 
   public async getDiskUsage() {
-    const diskUsage = await check(this._path);
-    return `
-    Free Disk : ${(diskUsage.free / 1000000000).toFixed(2)}GB
-    Total Disk : ${(diskUsage.total / 1000000000).toFixed(2)}GB`;
+    return "0";
   }
 }
 
